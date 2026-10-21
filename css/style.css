@@ -1,0 +1,154 @@
+:root {
+    --text-color: #2b2d42;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --card-border: rgba(255, 255, 255, 0.7);
+    --icon-color: #495057;
+}
+
+body.dark-mode {
+    --text-color: #f8f9fa;
+    --card-bg: rgba(30, 34, 42, 0.94);
+    --card-border: rgba(220, 53, 69, 0.3);
+    --icon-color: #ced4da;
+}
+
+html, body { min-height: 100vh; margin: 0; padding: 0; width: 100%; }
+
+body {
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark-mode { background-color: #121212; }
+
+.header-hero {
+    background: linear-gradient(180deg, rgba(211, 63, 74, 0.95) 0%, rgba(235, 124, 101, 0.9) 60%, rgba(248, 249, 250, 0.2) 100%),
+                url('../img/header.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    padding-bottom: 110px;
+    color: #ffffff;
+}
+
+body.dark-mode .header-hero {
+    background: linear-gradient(180deg, rgba(30, 10, 12, 0.95) 0%, rgba(60, 20, 25, 0.9) 60%, rgba(18, 18, 18, 0.3) 100%),
+                url('../img/header.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35em;
+}
+
+.header-title { color: #ffffff; font-weight: 800; text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
+.header-subtitle { color: #f8f9fa; font-weight: 600; text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+
+.search-wrapper { margin-bottom: -30px; position: relative; z-index: 10; }
+
+.glass-panel {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summary-card:hover {
+    color: var(--text-color);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+.summary-count { color: #dc3545; }
+
+.kuliner-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18); }
+
+body.dark-mode .card-title { color: #ff6b6b; }
+
+body.dark-mode .kuliner-card .card-text {
+    color: #ced4da !important;
+}
+
+mark {
+    padding: 0 0.15em;
+    border-radius: 0.2em;
+    background-color: #ffe08a;
+    color: #212529;
+}
+
+.form-control, .form-select { color: var(--text-color); }
+.form-control::placeholder { color: var(--icon-color); opacity: 0.8; }
+.form-select option { color: #000; background: #fff; }
+
+body.dark-mode #cari-input,
+body.dark-mode #loginEmail,
+body.dark-mode #loginPass {
+    color: #f8f9fa !important;
+    caret-color: #f8f9fa;
+    -webkit-text-fill-color: #f8f9fa;
+}
+
+body.dark-mode #cari-input::placeholder,
+body.dark-mode #loginEmail::placeholder,
+body.dark-mode #loginPass::placeholder {
+    color: #ced4da !important;
+    opacity: 1;
+    -webkit-text-fill-color: #ced4da;
+}
+
+body.dark-mode #cari-input:-webkit-autofill,
+body.dark-mode #loginEmail:-webkit-autofill,
+body.dark-mode #loginPass:-webkit-autofill {
+    -webkit-text-fill-color: #f8f9fa;
+    transition: background-color 9999s ease-out 0s;
+}
+
+body.dark-mode .modal-content .form-control { background-color: transparent; }
+body.dark-mode .btn-close { filter: invert(1); }
+
+iframe { border: 0; width: 100%; height: 100%; border-radius: 10px; }
+
+.footer-glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid var(--card-border);
+    color: var(--text-color);
+    margin-top: auto;
+}
+
+body.dark-mode .footer-glass .text-muted {
+    color: #ced4da !important;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 1030;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+}
